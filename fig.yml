@@ -1,0 +1,14 @@
+web:
+  build: .
+  environment:
+    WEB_PORT: 8080
+varnish:
+  image: jacksoncage/varnish
+  links:
+   - web
+  ports:
+   - "9000:80"
+  environment:
+    VARNISH_BACKEND_PORT: 8080
+    VARNISH_BACKEND_IP: web
+    VARNISH_PORT: 80

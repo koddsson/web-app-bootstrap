@@ -1,0 +1,26 @@
+@small: 5px;
+@normal: 10px;
+@large: 25px;
+
+.u-padding {
+  padding: @normal;
+
+  &Top {
+    padding-top: @normal;
+  }
+}
+
+.u-margin {
+  margin: @normal;
+  &Top {
+    margin-top: @normal;
+
+    &Large {
+      margin-top: @large;
+    }
+
+    &Small {
+      margin-top: @small;
+    }
+  }
+}

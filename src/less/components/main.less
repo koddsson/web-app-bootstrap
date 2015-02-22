@@ -1,0 +1,15 @@
+/*
+ * Sticky footer flexbox trick lifted from:
+ *   http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+ */
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &-content {
+    flex: 1;
+  }
+}
+
